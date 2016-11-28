@@ -14,6 +14,13 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app->get('/test', function () use ($app) {
+    $data = 'test25';
+    return $app['twig']->render('test.html.twig', array('data' => $data));
+})
+->bind('test')
+;
+
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;
