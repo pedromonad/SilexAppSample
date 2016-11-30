@@ -1,1 +1,1 @@
-# Silex-App-Starter
+# Silex App Starter
